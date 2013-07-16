@@ -165,7 +165,8 @@ int check_light_state(int id){
 	}
 	p++;	//p指向状态位。0表示离线，1表示在线
 	if('0'==*p){
-		state=OFFLINE;
+		//state=OFFLINE;
+		state=CLOSED;
 	}else{
 		while(p++){
 			if(*p!=','){

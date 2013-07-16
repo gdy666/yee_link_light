@@ -50,7 +50,7 @@ void yeelight_ser(){
 	struct switch_info *s_i;
 	
 	while(1){
-		sleep(10);
+		sleep(1);
 		pthread_mutex_lock(&mutex);
 		state=check_light_state(yeelight);	//检测灯的状态
 		s_i=get_switch_info(device_id,switch_id);	//获取最新的开关信息
@@ -61,7 +61,8 @@ void yeelight_ser(){
 		*/
 		if(s_i==NULL||
 			state==ERROR||
-			s_i->state==state)
+			s_i->state==state||
+			strcmp(s_i->timestamp,s_info->timestamp))	//如果最后一次执行或同步到的时间戳和开关当前的时间戳不同
 		{
 			if(NULL!=s_i){
 				free(s_i->timestamp);
