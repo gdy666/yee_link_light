@@ -11,3 +11,4 @@
 其中/root/YeeSer为程序的绝对路径。   
 5.demo文件夹下为编译好的适合路由器hg255d在openwrt环境下使用的程序。   
 6.代码中使用了来自网友wanli编写的 yeelink API for Linux：http://www.codelifeliwan.com/?p=612   
+7.演示：http://www.gifshow.com/i/photo/lwx?userId=509321&photoId=5407773&from=sina2.0&r=33    
